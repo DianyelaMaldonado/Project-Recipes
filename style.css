@@ -211,10 +211,13 @@ ul.left.hide-on-med-and-down {
     margin-bottom: auto;
 }
 
-img.responsive-img,
+
+/* img.responsive-img,
 video.responsive-video {
     width: -webkit-fill-available;
-}
+    max-width: 96%;
+    height: auto;
+} */
 
 .relative {
     position: relative;
@@ -237,11 +240,7 @@ video.responsive-video {
 .border {
     border: 2px solid #b0c364;
     border-bottom-style: none;
-}
-
-.slideCardDescription {
-    padding-top: 24%;
-    padding-bottom: 37%;
+    height: -webkit-fill-available;
 }
 
 .subtitle {
@@ -289,3 +288,47 @@ video.responsive-video {
 
 
 /* ---------cards----------- */
+
+.rowTwo {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 5% 10%;
+}
+
+.borderTwo {
+    border: 2px solid #b0c364;
+    height: -webkit-fill-available;
+}
+
+.aboutTheImageTwo {
+    background-color: white;
+    position: absolute;
+    /*esto para que mi backgraund quede sobre la imagen*/
+    width: 70%;
+    height: 44%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 20px;
+}
+
+.subtitleTwo {
+    color: #b0c364;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.titleRecipeTwo {
+    font-size: 24px;
+    color: black;
+    font-weight: bolder;
+    padding-top: 2%;
+}
+
+.slideCardDescriptionTwo {
+    padding-top: 20px;
+}
