@@ -1,7 +1,178 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+big,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+fieldset,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+section,
+small,
+span,
+strike,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%
+}
+
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block
+}
+
+legend {
+    display: none
+}
+
+ :focus {
+    outline: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption,
+td,
+th {
+    text-align: left;
+    font-weight: 400
+}
+
+a img,
+iframe {
+    border: none
+}
+
+ul {
+    list-style: none
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    font-family: inherit
+}
+
+input,
+select {
+    vertical-align: middle
+}
+
+select {
+    margin: inherit
+}
+
+button {
+    border: 0;
+    padding: 0;
+    background: 0 0;
+    cursor: pointer
+}
+
+ol {
+    margin-left: 2em
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+* html .clearfix {
+    height: 1%
+}
+
+.clearfix {
+    display: block
+}
+
+
+/* ..................styles home............... */
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+
+/* ---------navbar----------- */
 
 nav.nav-extended .nav-wrapper {
     padding: 22px 0px;
@@ -13,6 +184,108 @@ nav.nav-extended {
     -webkit-box-shadow: none;
 }
 
+nav ul {
+    padding-bottom: 30px;
+    width: -webkit-fill-available;
+}
+
 a.black-text {
     font-weight: bolder;
 }
+
+ul.left.hide-on-med-and-down {
+    padding-left: 10%;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* ---------slider----------- */
+
+.row {
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: auto;
+}
+
+img.responsive-img,
+video.responsive-video {
+    width: -webkit-fill-available;
+}
+
+.relative {
+    position: relative;
+}
+
+.aboutTheImage {
+    background-color: white;
+    position: absolute;
+    /*esto para que mi backgraund quede sobre la imagen*/
+    width: 70%;
+    height: 72%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 26px;
+}
+
+.border {
+    border: 2px solid #b0c364;
+    border-bottom-style: none;
+}
+
+.slideCardDescription {
+    padding-top: 24%;
+    padding-bottom: 37%;
+}
+
+.subtitle {
+    color: #b0c364;
+    font-weight: bolder;
+    padding-bottom: 4%;
+    padding-top: 14%;
+    font-size: 14px;
+}
+
+.titleRecipe {
+    color: black;
+    font-weight: bolder;
+    padding-bottom: 12%;
+    padding-top: 1%;
+    font-size: 30px;
+}
+
+.subtitleDate {
+    color: #7a7a7a;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.sliderButton {
+    background-color: #b0c364;
+    color: white;
+}
+
+.next {
+    position: absolute;
+    margin: auto;
+    right: 3%;
+    bottom: 0;
+    top: 0;
+}
+
+.prev {
+    position: absolute;
+    left: 3%;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+}
+
+
+/* ---------cards----------- */
