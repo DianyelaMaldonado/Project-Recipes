@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var sliderVisibility = document.querySelector('#sliderView');
     loadJSON();
     loadJSONTwo();
-
-
+    loadJSONThree();
 });
 
 
@@ -54,10 +53,8 @@ function loadJSONTwo() {
             CardVisibility = document.querySelector('#CardView');
             let cards = '';
             let cardRecipes = result_json2.data;
-            // console.log(cardRecipes);
             for (var cardRecipesNum in cardRecipes) {
                 let data_card = cardRecipes[cardRecipesNum];
-                console.log(data_card);
                 cards += `
                            <div class="col s4 relative">                       
                               <img class="responsive-img" src="${data_card['image']['styles']['large']}">
@@ -73,27 +70,70 @@ function loadJSONTwo() {
                     `;
             }
             CardVisibility.innerHTML = cards;
-            // console.log(CardVisibility);
         });
 
 }
 
+function loadJSONThree() {
+    fetch('http://api.imagendigital.com/v2/cocinadelirante/node.json/339fd1e0444ddbbd4d4528d8df161108?fields=id,title,summary,url,taxonomy.name,created,image.styles.gallerie,author.name&type=receta&limit=2&0ffset=6')
+        .then(res => {
+            return res.json()
+        })
+        .then(function(result_json2) {
+            noteVisibility = document.querySelector('#noteView');
+            // console.log(noteVisibility);
+            let notes = '';
+            let notesRecipes = result_json2.data;
+            console.log(notesRecipes[0]);
+            for (var noteRecipesNum in notesRecipes) {
+                let data_note = notesRecipes[noteRecipesNum];
+                console.log(noteRecipesNum);
+                var encounterDate = data_note['created'];
+                var formattedDate = timestamp(encounterDate);
+
+                if (noteRecipesNum == 0) {
+                    notes += `
+                    <div class="row paddinngRow">
+                        <div class="col s6">
+                          <img class="responsive-img" src="${data_note['image']['styles']['gallerie']}">
+                        </div>
+                        <div class="col s6">
+                            <div class="ContentNotes relative">
+                                <h6 class="subtiteThree">${data_note['taxonomy']['name']}</h6>
+                                <h4 class="titleRecipeNote">${data_note['title']}</h4>
+                                <h6 class="dateAndAutor">${formattedDate}/ ${data_note['author']['name']}</h6>
+                                <p class="recipeNoteDescription">${data_note['summary']}</p>
+                                <button class="sliderButton next waves-effect waves-light btn-small information">READ MORE</button>
+                                </div>
+                        </div> 
+                    </div>
+                    `
+                }
+
+                if (noteRecipesNum == 1) {
+                    notes += `
+                    <div class="row paddinngRow">
+
+                        <div class="col s6">
+                            <div class="ContentNotes relative">
+                                <h6 class="subtiteThree">${data_note['taxonomy']['name']}</h6>
+                                <h4 class="titleRecipeNote">${data_note['title']}</h4>
+                                <h6 class="dateAndAutor">${formattedDate}/ ${data_note['author']['name']}</h6>
+                                <p class="recipeNoteDescription">${data_note['summary']}</p>
+                                <button class="sliderButton next waves-effect waves-light btn-small information">READ MORE</button>
+                                </div>
+                        </div> 
+                            <div class="col s6">
+                             <img class="responsive-img" src="${data_note['image']['styles']['gallerie']}">
+                            </div>
+                    </div>
+                    `
+                }
 
 
+            }
+            noteVisibility.innerHTML = notes;
 
-function timestamp(encounterDate) {
-    var timeTransform = encounterDate;
-    var date = new Date(timeTransform * 1000);
-    var formattedDate = ('0' + date.getDate()).slice(-2) + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' + date.getFullYear() + ' ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
-    return formattedDate;
-}
+        });
 
-function slickSlider() {
-    $('div.cardSlider div.row').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: $('.sliderButton.prev'),
-        nextArrow: $('.sliderButton.next'),
-    });
 }

@@ -336,8 +336,8 @@ ul.left.hide-on-med-and-down {
 
 .subtiteThree {
     color: #b0c364;
-    font-weight: bolder;
-    font-size: 12px;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 .titleRecipeNote {
