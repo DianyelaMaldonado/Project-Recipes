@@ -232,15 +232,16 @@ ul.left.hide-on-med-and-down {
 .border {
     border: 2px solid #b0c364;
     border-bottom-style: none;
-    height: -webkit-fill-available;
+    position: relative;
+    height: 100%;
 }
 
 .subtitle {
     color: #b0c364;
-    font-weight: bolder;
     padding-bottom: 4%;
-    padding-top: 14%;
+    padding-top: 15%;
     font-size: 14px;
+    text-transform: uppercase;
 }
 
 .titleRecipe {
@@ -248,13 +249,13 @@ ul.left.hide-on-med-and-down {
     font-weight: bolder;
     padding-bottom: 12%;
     padding-top: 1%;
-    font-size: 30px;
+    font-size: 16px;
 }
 
 .subtitleDate {
     color: #7a7a7a;
-    font-weight: bolder;
     font-size: 14px;
+    text-transform: uppercase;
 }
 
 .sliderButton {
@@ -294,7 +295,8 @@ ul.left.hide-on-med-and-down {
 
 .borderTwo {
     border: 2px solid #b0c364;
-    height: -webkit-fill-available;
+    position: relative;
+    height: 100%;
 }
 
 .aboutTheImageTwo {
@@ -302,7 +304,7 @@ ul.left.hide-on-med-and-down {
     position: absolute;
     /*esto para que mi backgraund quede sobre la imagen*/
     width: 70%;
-    height: 44%;
+    max-height: 55%;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -313,12 +315,13 @@ ul.left.hide-on-med-and-down {
 
 .subtitleTwo {
     color: #b0c364;
-    font-weight: bolder;
+    text-transform: uppercase;
     font-size: 12px;
+    padding-bottom: 3px;
 }
 
 .titleRecipeTwo {
-    font-size: 24px;
+    font-size: 14px;
     color: black;
     font-weight: bolder;
     padding-top: 2%;

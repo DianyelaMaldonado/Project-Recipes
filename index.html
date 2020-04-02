@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Bueno food blog</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -30,52 +31,8 @@
     <div id="mainContent">
         <section id="slider">
             <div class="cardSlider relative">
-                <div class="row">
+                <div id="sliderView" class="row">
 
-                    <div class="col s4 relative">
-                        <!-- Promo Content 1 goes here -->
-                        <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/03/crepas-de-avena-sin-huevo-light-rico.jpg" alt="hamburguesa" class="responsive-img">
-
-                        <div class="aboutTheImage">
-                            <div class="border">
-                                <div class="slideCardDescription">
-                                    <h6 class="subtitle">HEALTHY FOOD</h6>
-                                    <h4 class="titleRecipe">Chickend Salad</h4>
-                                    <h6 class="subtitleDate">JULY 11,2018 / BY JULIA STILES</h6>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col s4 relative b0c364">
-                        <!-- Promo Content 2 goes here -->
-                        <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/03/crepas-de-avena-sin-huevo-light-rico.jpg" alt="hamburguesa" class="responsive-img">
-                        <div class="aboutTheImage relative">
-                            <div class="border">
-                                <div class="slideCardDescription">
-                                    <h6 class="subtitle">HEALTHY FOOD</h6>
-                                    <h4 class="titleRecipe">Chickend Salad</h4>
-                                    <h6 class="subtitleDate">JULY 11,2018 / BY JULIA STILES</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col s4 relative">
-                        <!-- Promo Content 3 goes here -->
-                        <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2020/03/crepas-de-avena-sin-huevo-light-rico.jpg" alt="hamburguesa" class="responsive-img">
-
-                        <div class="aboutTheImage ">
-                            <div class="border">
-                                <div class="slideCardDescription">
-                                    <h6 class="subtitle">HEALTHY FOOD</h6>
-                                    <h4 class="titleRecipe">Chickend Salad</h4>
-                                    <h6 class="subtitleDate">JULY 11,2018 / BY JULIA STILES</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <button class="sliderButton prev waves-effect waves-light btn-small">PREV</button>
                 <button class="sliderButton next waves-effect waves-light btn-small">NEXT</button>
@@ -84,46 +41,8 @@
 
         <section id="firstCards">
             <div class="cardFirst relative container">
-                <div class="row">
-                    <div class="col s4 relative">
-                        <!-- Promo Content 1 goes here -->
-                        <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/large/public/images/2019/12/galletas-de-coco-para-el-metabolismo.jpg" alt="hamburguesa" class="responsive-img">
-                        <div class="aboutTheImageTwo">
-                            <div class="borderTwo">
-                                <div class="slideCardDescriptionTwo">
-                                    <h6 class="subtitleTwo">THE BEST</h6>
-                                    <h4 class="titleRecipeTwo">Healthy Food</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="CardView" class="row">
 
-                    <div class="col s4 relative b0c364">
-                        <!-- Promo Content 2 goes here -->
-                        <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/large/public/images/2019/12/galletas-de-coco-para-el-metabolismo.jpg" alt="hamburguesa" class="responsive-img">
-                        <div class="aboutTheImageTwo relative">
-                            <div class="borderTwo">
-                                <div class="slideCardDescriptionTwo">
-                                    <h6 class="subtitleTwo">THE BEST</h6>
-                                    <h4 class="titleRecipeTwo">Organic Cuisine</h4>
-                                    <h6></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col s4 relative">
-                        <!-- Promo Content 3 goes here -->
-                        <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/large/public/images/2019/12/galletas-de-coco-para-el-metabolismo.jpg" alt="hamburguesa" class="responsive-img">
-                        <div class="aboutTheImageTwo">
-                            <div class="borderTwo">
-                                <div class="slideCardDescriptionTwo">
-                                    <h6 class="subtitleTwo">THE BEST</h6>
-                                    <h4 class="titleRecipeTwo">Vegetarian Food</h4>d
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -285,16 +204,16 @@
                 </div>
             </div>
         </section>
+    </div>
+    <section class="footer">
+        <p>
+            copyright &copy; 2020</p>
+        <!-- &copy; es para que salga la C tipo copright en el pie de página-->
 
-        <section class="footer">
-            <p>
-                copyright &copy; 2020</p>
-            <!-- &copy; es para que salga la C tipo copright en el pie de página-->
-    </div>
     </section>
-    </div>
-    <a href="section.html" title="Mi enlace">Mi enlace</a>
-    <script type="text/javascript " src="js/materialize.min.js "></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript " src="data.js"></script>
 </body>
 
 </html>
