@@ -384,7 +384,7 @@ ul.left.hide-on-med-and-down {
 
 .subtitlefour {
     color: #b0c364;
-    font-weight: bolder;
+    text-transform: uppercase;
     font-size: 12px;
     text-align: left;
     padding-bottom: 3%;
