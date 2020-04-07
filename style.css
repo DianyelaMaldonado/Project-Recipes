@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+big,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+fieldset,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+section,
+small,
+span,
+strike,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%
+}
+
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block
+}
+
+legend {
+    display: none
+}
+
+ :focus {
+    outline: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption,
+td,
+th {
+    text-align: left;
+    font-weight: 400
+}
+
+a img,
+iframe {
+    border: none
+}
+
+ul {
+    list-style: none
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    font-family: inherit
+}
+
+input,
+select {
+    vertical-align: middle
+}
+
+select {
+    margin: inherit
+}
+
+button {
+    border: 0;
+    padding: 0;
+    background: 0 0;
+    cursor: pointer
+}
+
+ol {
+    margin-left: 2em
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+* html .clearfix {
+    height: 1%
+}
+
+.clearfix {
+    display: block
+}
+
+
+/* ..................styles home............... */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ---------navbar----------- */
+
+nav.nav-extended .nav-wrapper {
+    padding: 22px 0px;
+    min-height: 130px;
+}
+
+nav.nav-extended {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+nav ul {
+    padding-bottom: 30px;
+    width: -webkit-fill-available;
+}
+
+a.black-text {
+    font-weight: bolder;
+}
+
+ul.left.hide-on-med-and-down {
+    padding-left: 10%;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* ---------slider----------- */
+
+.row {
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.aboutTheImage {
+    background-color: white;
+    position: absolute;
+    /*esto para que mi backgraund quede sobre la imagen*/
+    width: 70%;
+    height: 72%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 26px;
+}
+
+.border {
+    border: 2px solid #b0c364;
+    border-bottom-style: none;
+    position: relative;
+    height: 100%;
+}
+
+.subtitle {
+    color: #b0c364;
+    padding-bottom: 4%;
+    padding-top: 15%;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.titleRecipe {
+    color: black;
+    font-weight: bolder;
+    padding-bottom: 12%;
+    padding-top: 1%;
+    font-size: 16px;
+}
+
+.subtitleDate {
+    color: #7a7a7a;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.sliderButton {
+    background-color: #b0c364;
+    color: white;
+}
+
+.next {
+    position: absolute;
+    margin: auto;
+    right: 3%;
+    bottom: 0;
+    top: 0;
+}
+
+.prev {
+    position: absolute;
+    left: 3%;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+}
+
+.cardFirst.relative.container {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 80%;
+    }
+}
+
+
+/* ---------cards----------- */
+
+.borderTwo {
+    border: 2px solid #b0c364;
+    position: relative;
+    height: 100%;
+}
+
+.aboutTheImageTwo {
+    background-color: white;
+    position: absolute;
+    /*esto para que mi backgraund quede sobre la imagen*/
+    width: 70%;
+    max-height: 55%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 20px;
+}
+
+.subtitleTwo {
+    color: #b0c364;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-bottom: 3px;
+}
+
+.titleRecipeTwo {
+    font-size: 14px;
+    color: black;
+    font-weight: bolder;
+    padding-top: 2%;
+}
+
+.slideCardDescriptionTwo {
+    padding-top: 20px;
+}
+
+
+/* ---------Notes----------- */
+
+.subtiteThree {
+    color: #b0c364;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.titleRecipeNote {
+    color: black;
+    font-weight: bolder;
+    font-size: 30px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.dateAndAutor {
+    color: #7a7a7a;
+    font-weight: bolder;
+    font-size: 13px;
+    padding-bottom: 6%;
+}
+
+.recipeNoteDescription {
+    color: #7a7a7a;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.ContentNotes {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.information {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 66%;
+}
+
+.paddinngRow {
+    padding-bottom: 5%;
+}
+
+
+/* ---------Big Box----------- */
+
+.subtitlefour {
+    color: #b0c364;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: left;
+    padding-bottom: 3%;
+}
+
+.titleRecipefour {
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-bottom: 7%;
+    padding-top: 1%;
+    text-align: left;
+}
+
+.dateAndAutorbigbox {
+    color: #7a7a7a;
+    font-weight: bolder;
+    font-size: 12px;
+    text-align: left;
+    padding-bottom: 10%;
+}
+
+.recipeNoteDescriptionfour {
+    color: #7a7a7a;
+    font-weight: bolder;
+    font-size: 13px;
+    text-align: left;
+}
+
+
+/* ---------litle Box----------- */
+
+.littlebox {
+    padding-top: 5%;
+}
+
+.titlelittlebox {
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
+    padding-bottom: 7%;
+    padding-top: 1%;
+    text-align: left;
+}
+
+.dateAndAutorlittlebox {
+    color: #7a7a7a;
+    font-weight: bolder;
+    font-size: 11px;
+    padding-bottom: 2%;
+    text-align: left;
+    padding-bottom: 10%;
+}
+
+.footer {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: #7a7a7a;
+    background-color: white;
+    font-weight: bolder;
+}
+
+.footer p {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 70px;
+}
+
+
+/* ---------section----------- */
+
+.pagination li.active a {
+    background-color: #e0e0e0;
+    color: #7a7a7a;
+}
+
+.pagination li.active a:hover {
+    background-color: #b0c364;
+    color: white;
+}
+
+ul.pagination {
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+
+/* ---------section Two----------- */
+
+.row.all {
+    padding-top: 1%;
+}
+
+.row.container {
+    margin: 0px auto;
+}
+
+.subtitleRecipeBody {
+    color: #b0c364;
+    font-weight: bolder;
+    font-size: 12px;
+    text-align: left;
+    padding-bottom: 3%;
+    padding-top: 10%;
+}
+
+.titleRecipeBody,
+.step {
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
+    padding-bottom: 7%;
+    padding-top: 1%;
+    text-align: left;
+}
+
+.dateRecipeBody {
+    color: #7a7a7a;
+    font-weight: bolder;
+    font-size: 11px;
+    padding-bottom: 2%;
+    text-align: left;
+    padding-bottom: 10%;
+}
+
+.recipeBodyDescription {
+    color: #7a7a7a;
+    font-weight: bolder;
+    font-size: 15px;
+    padding-bottom: 2%;
+    text-align: left;
+    padding-bottom: 10%;
+}
+
+div.card-content p {
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 3%;
+    display: flex;
+}
+
+.card .card-title {
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.material-icons {
+    color: black;
+    padding-right: 10px;
+}
+
+.checklistTiltle {
+    padding-top: 7%;
+    padding-bottom: 5%;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 6%;
+}
+
+.checklist {
+    padding: 10%;
+    color: #7a7a7a;
+    font-weight: bold;
+}
+
+.chefDescription {
+    padding: 10%;
+    color: #7a7a7a;
+    font-weight: bold;
+}
+
+.chefName {
+    font-weight: bolder;
+}
+
+img.small.circle.responsive-img {
+    max-width: 50%;
+}
