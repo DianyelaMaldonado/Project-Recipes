@@ -14,3 +14,13 @@ function slickSlider() {
         nextArrow: $('.sliderButton.next'),
     });
 }
+
+function viewMore() {
+    let view = document.getElementById('more');
+    view.addEventListener('click', function (e) {
+        e.preventDefault();
+        alert('funcionó')
+    });
+}
+
+export { timestamp, slickSlider, viewMore }

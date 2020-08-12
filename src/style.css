@@ -568,3 +568,40 @@ div.card-content p {
 img.small.circle.responsive-img {
     max-width: 50%;
 }
+
+/* ---------Responsivo-----------*/
+
+@media only screen and (max-width: 767px) {
+  .aboutTheImage {
+    background-color: white;
+    position: absolute;
+    width: 88%;
+    height: 80%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 26px;
+    }
+    .subtitle {
+    color: #b0c364;
+    padding-bottom: 4%;
+    padding-top: 5%;
+    font-size: 12px;
+    text-transform: uppercase;
+    }
+    .titleRecipe {
+    color: black;
+    font-weight: bolder;
+    padding-bottom: 6%;
+    /* padding-top: 1%; */
+    font-size: 10px;
+    }
+}
+
+
+
+
+
+  

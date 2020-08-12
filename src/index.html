@@ -12,18 +12,17 @@
 <body>
     <nav class="nav-extended white">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo brand-logo center"><img src="../assets/logo.png"
-                    alt="logo en letras de bueno food blog"></a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" class="brand-logo brand-logo center">
+                <img src="../assets/logo.png" alt="logo en letras de bueno food blog"></a>
         </div>
         <div class="nav-content">
             <ul class="left hide-on-med-and-down">
-                <li><a class="black-text" href="index.html">Home</a></li>
-                <li><a class="active black-text" href="section.html">Life&Tips</a></li>
-                <li><a class="black-text" href="section.html">En 1.2.3</a></li>
-                <li><a class="black-text" href="section.html">Healthy</a></li>
-                <li><a class="black-text" href="section.html">Postres Y Bebidas</a></li>
-                <li><a class="black-text" href="section.html">Slow Food</a></li>
+                <li><a data-nav="/Inicio" class="black-text" href="index.html">Home</a></li>
+                <li><a data-nav="/Life&tips" class="active black-text" href="sectiontwo.html">Life&Tips</a></li>
+                <li><a data-nav="/En123" class="black-text" href="section.html">En 1.2.3</a></li>
+                <li><a id="healthyTrial" data-nav="/Healthy" class="black-text" href="section.html">Healthy</a></li>
+                <li><a data-nav="/PostresyBebidas" class="black-text" href="section.html">Postres Y Bebidas</a></li>
+                <li><a data-nav="/SlowFood" class="black-text" href="section.html">Slow Food</a></li>
             </ul>
             <div class="clear"></div>
         </div>
@@ -77,8 +76,7 @@
     </section>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript " src="helpers.js"></script>
-    <script type="text/javascript " src="data.js"></script>
+    <script type="module" src="main.js"></script>
 
 </body>
 

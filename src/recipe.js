@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Bueno food blog</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-    <nav class="nav-extended white">
+function recipe() {
+    return `
+  <nav class="nav-extended white">
         <div class="nav-wrapper">
             <a href="#" class="brand-logo brand-logo center"><img src="../assets/logo.png"
                     alt="logo en letras de bueno food blog"></a>
@@ -19,9 +9,9 @@
         <div class="nav-content">
             <ul class="left hide-on-med-and-down">
                 <li><a class="black-text" href="index.html">Home</a></li>
-                <li><a class="active black-text" href="sectiontwo.html">Life&Tips</a></li>
-                <li><a class="black-text" href="sectiontwo.html">En 1.2.3</a></li>
-                <li><a class="black-text" href="sectiontwo.html">Healthy</a></li>
+                <li><a class="active black-text" href="section.html">Life&Tips</a></li>
+                <li><a class="black-text" href="section.html">En 1.2.3</a></li>
+                <li><a class="black-text" href="section.html">Healthy</a></li>
                 <li><a class="black-text" href="section.html">Postres Y Bebidas</a></li>
                 <li><a class="black-text" href="section.html">Slow Food</a></li>
             </ul>
@@ -32,7 +22,7 @@
     <section id="recipeBody">
         <div class="row all">
             <div class="col s4">
-                <div id="healthySection" class="container">
+                <div class="container">
                     <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/medium_listado/public/images/2020/01/ensalada-cremosa-de-camaron-salteado.jpg"
                         alt="" class="responsive-img">
                     <h6 class=" subtitleRecipeBody ">HEALTHY</h6>
@@ -210,9 +200,6 @@
         </div>
     </section>
     </div>
-
-
-    <script type="module" src="main.js"></script>
-</body>
-
-</html>
+    <a href="section.html " title="Mi enlace "></a>
+`
+}

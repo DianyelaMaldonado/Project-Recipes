@@ -1,8 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var sliderVisibility = document.querySelector('#sliderView');
+export { timestamp, slickSlider, viewMore } from "./helpers.js"
+document.addEventListener("DOMContentLoaded", function () {
     buildHome();
-
-
 });
 
 
@@ -11,7 +9,7 @@ function loadJSONOne() {
         .then(res => {
             return res.json()
         })
-        .then(function(result_json) {
+        .then(function (result_json) {
             sliderVisibility = document.querySelector('#sliderView');
             let slider = '';
             let recipesSliders = result_json.data;
@@ -36,7 +34,7 @@ function loadJSONOne() {
             }
             sliderVisibility.innerHTML = slider;
         })
-        .then(function() {
+        .then(function () {
             slickSlider();
         })
 
@@ -49,7 +47,7 @@ function loadJSONTwo() {
         .then(res => {
             return res.json()
         })
-        .then(function(result_json2) {
+        .then(function (result_json2) {
             CardVisibility = document.querySelector('#CardView');
             let cards = '';
             let cardRecipes = result_json2.data;
@@ -79,7 +77,7 @@ function loadJSONThree() {
         .then(res => {
             return res.json()
         })
-        .then(function(result_json3) {
+        .then(function (result_json3) {
             noteVisibility = document.querySelector('#noteView');
             let notes = '';
             let notesRecipes = result_json3.data;
@@ -101,7 +99,7 @@ function loadJSONThree() {
                                 <h4 class="titleRecipeNote">${data_note['title']}</h4>
                                 <h6 class="dateAndAutor">${formattedDate}/ ${data_note['author']['name']}</h6>
                                 <p class="recipeNoteDescription">${data_note['summary']}</p>
-                                <button class="sliderButton next waves-effect waves-light btn-small information">READ MORE</button>
+                                <button id="more" class="sliderButton next waves-effect waves-light btn-small information">READ MORE</button>
                                 </div>
                         </div> 
                     </div>
@@ -129,7 +127,9 @@ function loadJSONThree() {
                 }
             }
             noteVisibility.innerHTML = notes;
-        });
+        }).then(function () {
+            viewMore()
+        })
 
 }
 
@@ -138,11 +138,11 @@ function loadJSONFour() {
         .then(res => {
             return res.json()
         })
-        .then(function(result_json4) {
+        .then(function (result_json4) {
             someCardsVisibility = document.querySelector('#contentleft');
             let someCards = '';
             let visibilyCards = result_json4.data;
-            console.log(visibilyCards);
+            // console.log(visibilyCards);
 
             for (var visibilyCardNum in visibilyCards) {
                 let data_cardVisibility = visibilyCards[visibilyCardNum];
@@ -173,15 +173,15 @@ function loadJSONFive() {
         .then(res => {
             return res.json()
         })
-        .then(function(result_json5) {
+        .then(function (result_json5) {
             littleCardsVisibility = document.querySelector('#contentRight');
             let LittlesomeCards = '';
             let visibilyLittleCards = result_json5.data;
-            console.log(visibilyLittleCards);
+            // console.log(visibilyLittleCards);
 
             for (var visibilyLittleCardNum in visibilyLittleCards) {
                 let data_littleCards = visibilyLittleCards[visibilyLittleCardNum];
-                console.log(visibilyLittleCardNum);
+                // console.log(visibilyLittleCardNum);
                 var encounterDate = data_littleCards['created'];
                 var formattedDate = timestamp(encounterDate);
 
@@ -203,6 +203,7 @@ function loadJSONFive() {
             littleCardsVisibility.innerHTML = LittlesomeCards;
         })
 }
+
 
 function buildHome() {
     loadJSONOne();
