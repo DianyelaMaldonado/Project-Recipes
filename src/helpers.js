@@ -17,10 +17,12 @@ function slickSlider() {
 
 function viewMore() {
     let view = document.getElementById('more');
-    view.addEventListener('click', function (e) {
-        e.preventDefault();
-        alert('funcionó')
-    });
+    console.log("aqui está el id", view);
+    // view.addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     alert('funcionó')
+    // });
+
 }
 
 export { timestamp, slickSlider, viewMore }

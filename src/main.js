@@ -1,6 +1,8 @@
-export { timestamp, slickSlider, viewMore } from "./helpers.js"
+import { timestamp, slickSlider, viewMore } from "./helpers.js";
+import { clickSections } from "./functions/clickMenu.js"
 document.addEventListener("DOMContentLoaded", function () {
     buildHome();
+    clickSections();
 });
 
 
@@ -10,7 +12,7 @@ function loadJSONOne() {
             return res.json()
         })
         .then(function (result_json) {
-            sliderVisibility = document.querySelector('#sliderView');
+            let sliderVisibility = document.querySelector('#sliderView');
             let slider = '';
             let recipesSliders = result_json.data;
             for (var recipeSliderNum in recipesSliders) {
@@ -35,7 +37,7 @@ function loadJSONOne() {
             sliderVisibility.innerHTML = slider;
         })
         .then(function () {
-            slickSlider();
+            slickSlider()
         })
 
 }
@@ -48,7 +50,7 @@ function loadJSONTwo() {
             return res.json()
         })
         .then(function (result_json2) {
-            CardVisibility = document.querySelector('#CardView');
+            let CardVisibility = document.querySelector('#CardView');
             let cards = '';
             let cardRecipes = result_json2.data;
             for (var cardRecipesNum in cardRecipes) {
@@ -78,10 +80,10 @@ function loadJSONThree() {
             return res.json()
         })
         .then(function (result_json3) {
-            noteVisibility = document.querySelector('#noteView');
+            let noteVisibility = document.querySelector('#noteView');
             let notes = '';
             let notesRecipes = result_json3.data;
-            // console.log(notesRecipes[0]);
+            console.log(notesRecipes[0]);
             for (var noteRecipesNum in notesRecipes) {
                 let data_note = notesRecipes[noteRecipesNum];
                 var encounterDate = data_note['created'];
@@ -139,10 +141,9 @@ function loadJSONFour() {
             return res.json()
         })
         .then(function (result_json4) {
-            someCardsVisibility = document.querySelector('#contentleft');
+            let someCardsVisibility = document.querySelector('#contentleft');
             let someCards = '';
             let visibilyCards = result_json4.data;
-            // console.log(visibilyCards);
 
             for (var visibilyCardNum in visibilyCards) {
                 let data_cardVisibility = visibilyCards[visibilyCardNum];
@@ -174,14 +175,13 @@ function loadJSONFive() {
             return res.json()
         })
         .then(function (result_json5) {
-            littleCardsVisibility = document.querySelector('#contentRight');
+            let littleCardsVisibility = document.querySelector('#contentRight');
             let LittlesomeCards = '';
             let visibilyLittleCards = result_json5.data;
-            // console.log(visibilyLittleCards);
+
 
             for (var visibilyLittleCardNum in visibilyLittleCards) {
                 let data_littleCards = visibilyLittleCards[visibilyLittleCardNum];
-                // console.log(visibilyLittleCardNum);
                 var encounterDate = data_littleCards['created'];
                 var formattedDate = timestamp(encounterDate);
 
