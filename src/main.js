@@ -1,8 +1,10 @@
 import { timestamp, slickSlider, viewMore } from "./helpers.js";
-import { clickSections } from "./functions/clickMenu.js"
+import { clickSections } from "./functions/clickMenu.js";
+
 document.addEventListener("DOMContentLoaded", function () {
     buildHome();
-    clickSections();
+    clickSections()
+
 });
 
 
@@ -37,8 +39,11 @@ function loadJSONOne() {
             sliderVisibility.innerHTML = slider;
         })
         .then(function () {
+            loadJSONTwo()
             slickSlider()
         })
+
+
 
 }
 
@@ -70,7 +75,10 @@ function loadJSONTwo() {
                     `;
             }
             CardVisibility.innerHTML = cards;
-        });
+        })
+        .then(function () {
+            loadJSONThree()
+        })
 
 }
 
@@ -83,7 +91,6 @@ function loadJSONThree() {
             let noteVisibility = document.querySelector('#noteView');
             let notes = '';
             let notesRecipes = result_json3.data;
-            console.log(notesRecipes[0]);
             for (var noteRecipesNum in notesRecipes) {
                 let data_note = notesRecipes[noteRecipesNum];
                 var encounterDate = data_note['created'];
@@ -132,6 +139,9 @@ function loadJSONThree() {
         }).then(function () {
             viewMore()
         })
+        .then(function () {
+            loadJSONFour()
+        })
 
 }
 
@@ -167,6 +177,9 @@ function loadJSONFour() {
             }
             someCardsVisibility.innerHTML = someCards;
         })
+        .then(function () {
+            loadJSONFive()
+        })
 }
 
 function loadJSONFive() {
@@ -178,7 +191,6 @@ function loadJSONFive() {
             let littleCardsVisibility = document.querySelector('#contentRight');
             let LittlesomeCards = '';
             let visibilyLittleCards = result_json5.data;
-
 
             for (var visibilyLittleCardNum in visibilyLittleCards) {
                 let data_littleCards = visibilyLittleCards[visibilyLittleCardNum];
@@ -201,14 +213,14 @@ function loadJSONFive() {
                  `;
             }
             littleCardsVisibility.innerHTML = LittlesomeCards;
+        }).then(function () {
+            document.getElementById('root').style.display = 'none';
         })
 }
 
 
 function buildHome() {
     loadJSONOne();
-    loadJSONTwo();
-    loadJSONThree();
-    loadJSONFour();
-    loadJSONFive();
 }
+
+export { buildHome }

@@ -6,6 +6,7 @@
     <title>Bueno food blog</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +17,7 @@
                 <img src="../assets/logo.png" alt="logo en letras de bueno food blog"></a>
         </div>
         <div class="nav-content">
-            <ul class="left hide-on-med-and-down clickMenu">
+            <ul id="hideAndShow" class="left hide-on-med-and-down clickMenu">
                 <li><a data-nav="/" class="black-text">Home</a></li>
                 <li><a data-nav="/life-tips" class="active black-text">Life&Tips</a></li>
                 <li><a data-nav="/en123" class="black-text">En 1.2.3</a></li>
@@ -68,6 +69,11 @@
             </div>
         </section>
     </div>
+
+    <div id="root"></div>
+    <!-- <div id="sectionsWrapper"></div> -->
+
+
     <section class="footer">
         <p>
             copyright &copy; 2020</p>

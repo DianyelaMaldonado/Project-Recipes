@@ -7,7 +7,7 @@ function sections(id) {
             return res.json()
         })
         .then(function (sections) {
-            let healthyContent = document.querySelector('#sectionsWrapper');
+            // let healthyContent = document.querySelector('#sectionsWrapper');
             let healthyCards = '';
             let visibilyHealthyCards = sections.data;
             console.log(visibilyHealthyCards);
@@ -19,7 +19,7 @@ function sections(id) {
 
                 healthyCards += ` 
                 <section id="paginationPage">
-                    <div id="sectionsWrapper" class="container">
+                    <div class="container">
                         <div class="row littlebox">
                                 <div id="contentleft" class="col s8">
                                     <div class="row">
@@ -30,9 +30,9 @@ function sections(id) {
 
                                     <div class="col s6">
                                         <div class="textRecipeInformation">
-                                            <h6 class="subtitlefour">${data_healthyCards['title']}</h6>
-                                            <h4 class="titleRecipefour">${data_healthyCards['taxonomy']['name']}</h4>
-                                            <h6 class="dateAndAutorbigbox">${formattedDate} / ${data_healthyCards['author']}</h6>
+                                            <h6 class="subtitlefour">${data_healthyCards['taxonomy']['name']}</h6>
+                                            <h4 class="titleRecipefour">${data_healthyCards['title']}</h4>
+                                            <h6 class="dateAndAutorbigbox">${formattedDate} / ${data_healthyCards['author']['name']}</h6>
                                             <p class="recipeNoteDescriptionfour">${data_healthyCards['summary']}</p>
                                         </div>
                                 </div>
@@ -50,8 +50,8 @@ function sections(id) {
                                                 </div>
 
                                                 <div class="col s8">
-                                                    <h4 class="titlelittlebox">Friend eggs whith ham</h4>
-                                                    <h6 class="dateAndAutorlittlebox">JULY 11,2018 / BY JULIA STILES</h6>
+                                                    <h4 class="titlelittlebox">${data_healthyCards['title']}</h4>
+                                                    <h6 class="dateAndAutorlittlebox">${formattedDate} / ${data_healthyCards['author']['name']}</h6>
                                                 </div>
                                             </div>
                                         </li>
@@ -63,16 +63,18 @@ function sections(id) {
                                     <ul class="pagination">
                                         <li class="disabled"><a href="#!"><i class="material-icons">navigate_before</i></a></li>
                                         <li class="active"><a href="#!">1</a></li>
-                                        <li class="active waves-effect"><a href="#!">2</a></li>
-                                        <li class="active waves-effect"><a href="#!">3</a></li>
-                                        <li class="waves-effect"><a href="#!"><i class="material-icons">navigate_next</i></a></li>
+                                        <li class="active waves-effect"><a href="">2</a></li>
+                                        <li class="active waves-effect"><a href="">3</a></li>
+                                        <li class="waves-effect"><a href=""><i class="material-icons">navigate_next</i></a></li>
                                     </ul>
                                   </div>
                     </div>
                 </section>
                      `;
             }
-            healthyContent.innerHTML = healthyCards;
+            root.innerHTML = healthyCards;
+        }).then(function () {
+            document.getElementById('mainContent').style.display = 'none';
         })
 }
 
